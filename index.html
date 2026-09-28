@@ -1,92 +1,222 @@
-index.html!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Best VPN Deals & Comparison 2026</title>
+  <title>Best VPN Deals & Comparison 2026 | Compare NordVPN, Surfshark, ExpressVPN & More</title>
+  <meta name="description" content="Side-by-side comparison of the top VPNs in 2026: NordVPN, Surfshark, ExpressVPN, Proton VPN, CyberGhost and Private Internet Access. Devices, refund windows, ad blockers and more.">
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Cpath d='M16 3 5 7v8c0 7 5 12 11 14 6-2 11-7 11-14V7L16 3Z' fill='%2310b981'/%3E%3Cpath d='m11 16 4 4 7-8' stroke='%230f172a' stroke-width='3' fill='none' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E">
   <script src="https://cdn.tailwindcss.com"></script>
+  <script src="config.js"></script>
+  <style>
+    html { scroll-behavior: smooth; }
+    .tbl th, .tbl td { padding: .75rem 1rem; white-space: nowrap; }
+    details summary::-webkit-details-marker { display: none; }
+  </style>
 </head>
-<body class="bg-slate-900 text-white min-h-screen font-sans">
+<body class="bg-slate-900 text-white min-h-screen font-sans antialiased">
 
-  <header class="text-center py-12 px-4 border-b border-slate-800">
+  <!-- Top bar -->
+  <nav class="sticky top-0 z-20 bg-slate-900/90 backdrop-blur border-b border-slate-800">
+    <div class="max-w-6xl mx-auto px-4 h-14 flex items-center justify-between">
+      <a href="#" class="flex items-center gap-2 font-bold" aria-label="VPN Deal Compare home">
+        <svg width="26" height="26" viewBox="0 0 32 32" fill="none" aria-hidden="true">
+          <path d="M16 3 5 7v8c0 7 5 12 11 14 6-2 11-7 11-14V7L16 3Z" fill="#10b981"/>
+          <path d="m11 16 4 4 7-8" stroke="#0f172a" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+        </svg>
+        <span>VPN Deal Compare</span>
+      </a>
+      <div class="hidden sm:flex gap-6 text-sm text-slate-300">
+        <a href="#compare" class="hover:text-white">Compare</a>
+        <a href="#picks" class="hover:text-white">Top Picks</a>
+        <a href="#premium" class="hover:text-white">Premium Guide</a>
+        <a href="#faq" class="hover:text-white">FAQ</a>
+      </div>
+    </div>
+  </nav>
+
+  <header class="text-center py-14 px-4 border-b border-slate-800">
     <h1 class="text-4xl md:text-5xl font-extrabold text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-emerald-400">
       Exclusive VPN Deals & Discounts
     </h1>
     <p class="mt-4 text-slate-400 max-w-xl mx-auto text-lg">
-      Compare top-rated VPN providers, protect your online privacy, and unlock hidden streaming libraries at the lowest rates.
+      Compare top-rated VPN providers, protect your online privacy, and unlock streaming libraries at the lowest rates.
     </p>
+    <div class="mt-8 flex flex-col sm:flex-row gap-3 justify-center">
+      <a href="#compare" class="bg-emerald-500 hover:bg-emerald-400 text-slate-950 font-bold py-3 px-6 rounded-xl transition">Compare VPNs</a>
+      <a href="#premium" class="border border-slate-600 hover:border-slate-400 py-3 px-6 rounded-xl transition">Get the Premium Guide</a>
+    </div>
+    <p class="mt-6 text-xs text-slate-500">Updated September 2026 · Every VPN below offers a money-back guarantee</p>
   </header>
 
-  <main class="max-w-6xl mx-auto px-4 py-12">
-    <div class="grid md:grid-cols-3 gap-8">
-      
-      <!-- ExpressVPN Card -->
-      <div class="bg-slate-800 border border-slate-700 rounded-2xl p-6 flex flex-col justify-between hover:border-blue-500 transition">
-        <div>
-          <span class="bg-blue-500/20 text-blue-400 text-xs font-semibold px-3 py-1 rounded-full uppercase tracking-wider">High Speed</span>
-          <h2 class="text-2xl font-bold mt-4">ExpressVPN</h2>
-          <p class="text-slate-400 text-sm mt-2">Ultra-fast servers, top-tier streaming support, and strict no-logs policy.</p>
-          <ul class="mt-4 space-y-2 text-sm text-slate-300">
-            <li>✓ 3,000+ servers in 105 countries</li>
-            <li>✓ Lightway security protocol</li>
-            <li>✓ 30-day money-back guarantee</li>
-          </ul>
+  <main class="max-w-6xl mx-auto px-4">
+
+    <!-- Comparison table -->
+    <section id="compare" class="py-14 scroll-mt-16">
+      <h2 class="text-3xl font-bold">Side-by-side comparison</h2>
+      <p class="text-slate-400 mt-2">Swipe the table sideways on your phone to see every column.</p>
+      <div class="mt-6 overflow-x-auto rounded-2xl border border-slate-700">
+        <table class="tbl w-full text-sm text-left">
+          <thead class="bg-slate-800 text-slate-300">
+            <tr><th>VPN</th><th>Best for</th><th>Devices</th><th>Refund window</th><th>Ad blocker</th><th>Network</th><th></th></tr>
+          </thead>
+          <tbody id="compare-body" class="divide-y divide-slate-800"></tbody>
+        </table>
+      </div>
+      <p class="text-xs text-slate-500 mt-3">Details taken from each provider's official website in September 2026. Prices and features change, so check the provider's site before you buy.</p>
+    </section>
+
+    <!-- Top picks -->
+    <section id="picks" class="py-14 border-t border-slate-800 scroll-mt-16">
+      <h2 class="text-3xl font-bold">Our top picks</h2>
+      <div id="cards" class="mt-8 grid md:grid-cols-3 gap-8"></div>
+    </section>
+
+    <!-- Premium guide (PayPal) -->
+    <section id="premium" class="py-14 border-t border-slate-800 scroll-mt-16">
+      <div class="grid md:grid-cols-2 gap-8 items-stretch">
+        <div class="bg-slate-800 border-2 border-purple-500 rounded-2xl p-8 flex flex-col justify-between">
+          <div>
+            <span class="bg-purple-500/20 text-purple-300 text-xs font-semibold px-3 py-1 rounded-full uppercase tracking-wider">Instant Download</span>
+            <h2 class="text-3xl font-bold mt-4">Premium VPN Setup & Savings Guide</h2>
+            <p class="text-slate-400 mt-3">A step-by-step guide that gets you protected in 10 minutes and helps you avoid paying full price.</p>
+            <ul class="mt-5 space-y-2 text-slate-300">
+              <li>✓ Setup steps for iPhone, Android, Windows, Mac, TV and router</li>
+              <li>✓ When VPNs usually run their biggest sales</li>
+              <li>✓ How to use the money-back guarantee the right way</li>
+              <li>✓ Settings checklist: kill switch, DNS and leak test</li>
+              <li>✓ Streaming and public Wi-Fi tips</li>
+            </ul>
+          </div>
+          <div class="mt-8">
+            <p class="text-4xl font-extrabold">$<span class="js-price">4.99</span> <span class="text-base font-normal text-slate-400">one-time</span></p>
+            <form id="buy-form" action="https://www.paypal.com/cgi-bin/webscr" method="post" class="mt-4">
+              <input type="hidden" name="cmd" value="_xclick">
+              <input type="hidden" name="business" class="js-paypal-email" value="">
+              <input type="hidden" name="item_name" value="Premium VPN Setup & Savings Guide">
+              <input type="hidden" name="amount" class="js-price-input" value="4.99">
+              <input type="hidden" name="currency_code" value="USD">
+              <input type="hidden" name="no_shipping" value="1">
+              <input type="hidden" name="rm" value="1">
+              <input type="hidden" name="return" class="js-return" value="">
+              <input type="hidden" name="cancel_return" class="js-cancel" value="">
+              <button type="submit" class="w-full bg-amber-400 hover:bg-amber-300 text-slate-950 font-bold py-4 rounded-xl transition text-lg">
+                Buy with PayPal or Card
+              </button>
+            </form>
+            <p class="text-xs text-slate-500 mt-3">Secure checkout through PayPal. You can pay with a PayPal account or a debit or credit card. After you pay, you'll go straight to your guide.</p>
+          </div>
         </div>
-        <div class="mt-8">
-          <a href="https://www.expressvpn.com" target="_blank" class="block w-full text-center bg-blue-600 hover:bg-blue-500 text-white font-semibold py-3 rounded-xl transition">
-            Get ExpressVPN Deal
-          </a>
+
+        <div class="bg-slate-800 border border-slate-700 rounded-2xl p-8 flex flex-col justify-between">
+          <div>
+            <span class="bg-emerald-500/20 text-emerald-300 text-xs font-semibold px-3 py-1 rounded-full uppercase tracking-wider">Support Us</span>
+            <h2 class="text-2xl font-bold mt-4">Found this helpful?</h2>
+            <p class="text-slate-400 mt-3">This site is free and independent. A small tip keeps the comparisons updated.</p>
+          </div>
+          <form action="https://www.paypal.com/cgi-bin/webscr" method="post" class="mt-8 space-y-3">
+            <input type="hidden" name="cmd" value="_xclick">
+            <input type="hidden" name="business" class="js-paypal-email" value="">
+            <input type="hidden" name="item_name" value="Tip - VPN Deal Compare">
+            <input type="hidden" name="currency_code" value="USD">
+            <input type="hidden" name="no_shipping" value="1">
+            <input type="hidden" name="return" class="js-home" value="">
+            <div class="grid grid-cols-3 gap-2" role="group" aria-label="Tip amount">
+              <button type="submit" name="amount" value="2"  class="bg-slate-700 hover:bg-slate-600 py-3 rounded-xl font-semibold">$2</button>
+              <button type="submit" name="amount" value="5"  class="bg-slate-700 hover:bg-slate-600 py-3 rounded-xl font-semibold">$5</button>
+              <button type="submit" name="amount" value="10" class="bg-slate-700 hover:bg-slate-600 py-3 rounded-xl font-semibold">$10</button>
+            </div>
+          </form>
         </div>
       </div>
+    </section>
 
-      <!-- NordVPN Card -->
-      <div class="bg-slate-800 border-2 border-emerald-500 rounded-2xl p-6 flex flex-col justify-between relative shadow-lg shadow-emerald-950/50">
-        <span class="absolute -top-3 right-6 bg-emerald-500 text-slate-950 text-xs font-extrabold px-3 py-1 rounded-full uppercase">Most Popular</span>
-        <div>
-          <span class="bg-emerald-500/20 text-emerald-400 text-xs font-semibold px-3 py-1 rounded-full uppercase tracking-wider">Best Overall</span>
-          <h2 class="text-2xl font-bold mt-4">NordVPN</h2>
-          <p class="text-slate-400 text-sm mt-2">Advanced threat protection, double encryption, and high-speed connections.</p>
-          <ul class="mt-4 space-y-2 text-sm text-slate-300">
-            <li>✓ 6,000+ servers worldwide</li>
-            <li>✓ Built-in ad & malware blocker</li>
-            <li>✓ Connect up to 10 devices</li>
-          </ul>
-        </div>
-        <div class="mt-8">
-          <a href="https://www.nordvpn.com" target="_blank" class="block w-full text-center bg-emerald-500 hover:bg-emerald-400 text-slate-950 font-bold py-3 rounded-xl transition">
-            Get NordVPN Deal
-          </a>
-        </div>
+    <!-- How we choose -->
+    <section class="py-14 border-t border-slate-800">
+      <h2 class="text-3xl font-bold">How we compare VPNs</h2>
+      <div class="mt-6 grid sm:grid-cols-2 md:grid-cols-4 gap-4 text-sm">
+        <div class="bg-slate-800 rounded-xl p-5"><p class="font-semibold">Privacy</p><p class="text-slate-400 mt-1">No-logs policy, kill switch, leak protection.</p></div>
+        <div class="bg-slate-800 rounded-xl p-5"><p class="font-semibold">Value</p><p class="text-slate-400 mt-1">Devices per plan and refund window.</p></div>
+        <div class="bg-slate-800 rounded-xl p-5"><p class="font-semibold">Extras</p><p class="text-slate-400 mt-1">Ad and malware blocking, streaming support.</p></div>
+        <div class="bg-slate-800 rounded-xl p-5"><p class="font-semibold">Ease of use</p><p class="text-slate-400 mt-1">Apps for every major device.</p></div>
       </div>
+    </section>
 
-      <!-- VIP Access / Direct Purchase Card -->
-      <div class="bg-slate-800 border border-slate-700 rounded-2xl p-6 flex flex-col justify-between hover:border-purple-500 transition">
-        <div>
-          <span class="bg-purple-500/20 text-purple-400 text-xs font-semibold px-3 py-1 rounded-full uppercase tracking-wider">VIP Membership</span>
-          <h2 class="text-2xl font-bold mt-4">VIP Promo Alerts</h2>
-          <p class="text-slate-400 text-sm mt-2">Get direct email updates on price drops, flash sales, and secret 80%+ OFF VPN promo codes.</p>
-          <ul class="mt-4 space-y-2 text-sm text-slate-300">
-            <li>✓ Instant sale alerts</li>
-            <li>✓ Best streaming setup guides</li>
-            <li>✓ Priority support</li>
-          </ul>
-        </div>
-        <div class="mt-8 space-y-3">
-          <a href="https://buy.stripe.com/YOUR_ACTUAL_STRIPE_LINK" target="_blank" class="block w-full text-center bg-purple-600 hover:bg-purple-500 text-white font-semibold py-3 rounded-xl transition">
-            Pay with Card (Stripe)
-          </a>
-          <a href="https://www.paypal.com" target="_blank" class="block w-full text-center bg-amber-500 hover:bg-amber-400 text-slate-950 font-bold py-3 rounded-xl transition">
-            Pay with PayPal
-          </a>
-        </div>
+    <!-- FAQ -->
+    <section id="faq" class="py-14 border-t border-slate-800 scroll-mt-16">
+      <h2 class="text-3xl font-bold">Questions people ask</h2>
+      <div class="mt-6 space-y-3">
+        <details class="bg-slate-800 rounded-xl p-5"><summary class="cursor-pointer font-semibold">Do I really need a VPN?</summary><p class="text-slate-400 mt-3">A VPN encrypts your connection. That matters most on public Wi-Fi, when you travel, or when you don't want your internet provider to see which sites you visit.</p></details>
+        <details class="bg-slate-800 rounded-xl p-5"><summary class="cursor-pointer font-semibold">Which VPN is best overall?</summary><p class="text-slate-400 mt-3">For most people, NordVPN is the best all-round pick. Surfshark and Private Internet Access are strong choices if you want unlimited devices on one plan.</p></details>
+        <details class="bg-slate-800 rounded-xl p-5"><summary class="cursor-pointer font-semibold">Can I get my money back?</summary><p class="text-slate-400 mt-3">Yes. Every provider here offers a money-back guarantee. CyberGhost's is 45 days on longer plans, and the others offer 30 days.</p></details>
+        <details class="bg-slate-800 rounded-xl p-5"><summary class="cursor-pointer font-semibold">Is there a free option?</summary><p class="text-slate-400 mt-3">Proton VPN has a free plan for one device that connects to a limited set of countries. It's the best free option we know of.</p></details>
       </div>
+    </section>
 
-    </div>
+    <!-- Disclosure -->
+    <section id="disclosure" class="py-10 border-t border-slate-800 text-sm text-slate-400">
+      <h2 class="text-white font-semibold">Affiliate disclosure</h2>
+      <p class="mt-2">Some links on this site are affiliate links. If you buy through them, we may earn a commission at no extra cost to you. This helps keep the site free and does not change our recommendations.</p>
+    </section>
   </main>
 
-  <footer class="text-center py-8 border-t border-slate-800 text-slate-500 text-xs">
-    <p>© 2026 VPN Comparison Guide. All rights reserved.</p>
+  <footer class="text-center py-8 border-t border-slate-800 text-slate-500 text-xs space-y-2">
+    <p><a href="#disclosure" class="underline">Affiliate disclosure</a> · <a href="privacy.html" class="underline">Privacy</a></p>
+    <p>© 2026 VPN Deal Compare. All rights reserved.</p>
   </footer>
 
+  <script>
+    const C = window.SITE_CONFIG || {};
+    const L = C.affiliateLinks || {};
+    const VPNS = [
+      { id:"nordvpn", name:"NordVPN", tag:"Best Overall", color:"emerald", best:"Most people", devices:"10", refund:"30 days", adblock:"Yes", network:"225+ server locations",
+        blurb:"Strong security, fast speeds, and extras like a built-in ad and malware blocker.",
+        points:["Up to 10 devices","Ad, tracker & malware protection","Double VPN & obfuscated servers"], featured:true },
+      { id:"surfshark", name:"Surfshark", tag:"Best Value", color:"blue", best:"Families & many devices", devices:"Unlimited", refund:"30 days", adblock:"Yes (CleanWeb)", network:"4,500+ servers",
+        blurb:"One plan covers every device in your home, with a low price for long plans.",
+        points:["Unlimited devices","CleanWeb ad blocker","4,500+ servers"] },
+      { id:"expressvpn", name:"ExpressVPN", tag:"High Speed", color:"blue", best:"Speed & streaming", devices:"Up to 14", refund:"30 days", adblock:"Yes", network:"Servers in 100+ countries",
+        blurb:"Very fast connections with its own Lightway protocol and RAM-only servers.",
+        points:["Lightway, WireGuard & OpenVPN","RAM-only TrustedServer","Up to 14 connections"] },
+      { id:"protonvpn", name:"Proton VPN", tag:"Best Privacy", color:"purple", best:"Privacy & free plan", devices:"10", refund:"30 days", adblock:"Yes (NetShield)", network:"20,000+ servers, 140+ countries",
+        blurb:"Swiss-based, with open-source apps and a free plan to try.",
+        points:["Free plan available","Secure Core & Stealth","Open-source apps"] },
+      { id:"cyberghost", name:"CyberGhost", tag:"Longest Refund", color:"amber", best:"Beginners", devices:"7", refund:"45 days", adblock:"—", network:"100 countries",
+        blurb:"Simple apps and the longest money-back window on this list.",
+        points:["45-day money-back guarantee","WireGuard, OpenVPN & IKEv2","Up to 7 devices"] },
+      { id:"pia", name:"Private Internet Access", tag:"Unlimited Devices", color:"emerald", best:"Power users", devices:"Unlimited", refund:"30 days", adblock:"Yes (MACE)", network:"91 countries",
+        blurb:"Highly customizable, with unlimited devices and the MACE ad blocker.",
+        points:["Unlimited devices","MACE ad & malware blocker","WireGuard & OpenVPN"] }
+    ];
+    const link = id => L[id] || "#";
+    const colors = { emerald:"bg-emerald-500 hover:bg-emerald-400 text-slate-950", blue:"bg-blue-600 hover:bg-blue-500 text-white", purple:"bg-purple-600 hover:bg-purple-500 text-white", amber:"bg-amber-400 hover:bg-amber-300 text-slate-950" };
+
+    document.getElementById("compare-body").innerHTML = VPNS.map(v => `
+      <tr class="bg-slate-900 hover:bg-slate-800/60">
+        <td class="font-semibold">${v.name}</td><td class="text-slate-300">${v.best}</td><td>${v.devices}</td>
+        <td>${v.refund}</td><td>${v.adblock}</td><td class="text-slate-300">${v.network}</td>
+        <td><a href="${link(v.id)}" target="_blank" rel="sponsored noopener" class="text-emerald-400 font-semibold hover:underline">See deal →</a></td>
+      </tr>`).join("");
+
+    document.getElementById("cards").innerHTML = VPNS.map(v => `
+      <div class="bg-slate-800 ${v.featured ? "border-2 border-emerald-500 shadow-lg shadow-emerald-950/50" : "border border-slate-700"} rounded-2xl p-6 flex flex-col justify-between relative">
+        ${v.featured ? '<span class="absolute -top-3 right-6 bg-emerald-500 text-slate-950 text-xs font-extrabold px-3 py-1 rounded-full uppercase">Most Popular</span>' : ""}
+        <div>
+          <span class="bg-slate-700 text-slate-200 text-xs font-semibold px-3 py-1 rounded-full uppercase tracking-wider">${v.tag}</span>
+          <h3 class="text-2xl font-bold mt-4">${v.name}</h3>
+          <p class="text-slate-400 text-sm mt-2">${v.blurb}</p>
+          <ul class="mt-4 space-y-2 text-sm text-slate-300">${v.points.map(p => `<li>✓ ${p}</li>`).join("")}</ul>
+        </div>
+        <a href="${link(v.id)}" target="_blank" rel="sponsored noopener" class="mt-8 block w-full text-center ${colors[v.color]} font-bold py-3 rounded-xl transition">Get ${v.name} Deal</a>
+      </div>`).join("");
+
+    // PayPal wiring
+    const base = location.href.split("#")[0].split("?")[0].replace(/index\.html$/, "");
+    document.querySelectorAll(".js-paypal-email").forEach(i => i.value = C.paypalEmail || "");
+    document.querySelectorAll(".js-price").forEach(e => e.textContent = C.guidePrice || "4.99");
+    document.querySelectorAll(".js-price-input").forEach(i => i.value = C.guidePrice || "4.99");
+    document.querySelectorAll(".js-return").forEach(i => i.value = base + "thank-you.html");
+    document.querySelectorAll(".js-cancel, .js-home").forEach(i => i.value = base);
+  </script>
 </body>
 </html>
